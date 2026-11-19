@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Mercadinho - contato.html - Formulario de contato com validacoes nativas -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contato | Mercadinho</title>
+    <link rel="icon" href="img/mercattô-favicon.jpg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pagina="contato">
+    <header>
+        <nav class="navbar navbar-expand-lg barra">
+            <div class="container">
+                <a class="navbar-brand marca" href="index.html">Mercattô</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <form class="busca flex-grow-1 my-2 my-lg-0 mx-lg-4" id="formBusca" role="search">
+                        <input class="form-control" type="search" id="campoBusca" placeholder="Buscar produtos" aria-label="Buscar produtos">
+                    </form>
+                    <ul class="navbar-nav align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Categorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="favoritos.html">Favoritos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="vender.html">Vender</a></li>
+                        <li class="nav-item"><a class="nav-link" id="linkEntrar" href="entrar.html">Entrar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+                        <li class="nav-item"><a class="btn btn-verde ms-lg-2 mt-2 mt-lg-0" href="carrinho.html">Carrinho (<span class="contador-carrinho">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-4" style="max-width: 720px;">
+        <h1 class="h3 fw-bold mb-1">Fale com a gente</h1>
+        <p class="text-secondary">Mensagens enviadas neste navegador: <strong id="totalMensagens">0</strong></p>
+        <div id="alertas"></div>
+        <form id="formContato" novalidate>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="nome" placeholder="Seu nome" required minlength="3" pattern="[A-Za-zÀ-ÿ ]{3,}" title="Use apenas letras, com no mínimo 3 caracteres">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="voce@exemplo.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="telefone" placeholder="(41) 99999-9999" required pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Digite o telefone com DDD">
+            </div>
+            <div class="mb-3">
+                <label for="assunto" class="form-label">Assunto</label>
+                <select class="form-select" id="assunto" required>
+                    <option value="">Selecione</option>
+                    <option>Dúvida sobre um pedido</option>
+                    <option>Quero vender no Mercattô</option>
+                    <option>Sugestão</option>
+                    <option>Problema no site</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="5" placeholder="Escreva sua mensagem" required minlength="10"></textarea>
+            </div>
+            <button type="submit" class="btn btn-verde w-100">Enviar mensagem</button>
+        </form>
+    </main>
+    <footer class="rodape mt-5 py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+            <p class="mb-0">&copy; 2026 Mercattô. Projeto acadêmico de Front-End Web.</p>
+            <nav class="d-flex flex-wrap gap-3" aria-label="Rodapé">
+                <a href="home.html">Home</a>
+                <a href="planos.html">Planos</a>
+                <a href="contato.html">Contato</a>
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dados.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

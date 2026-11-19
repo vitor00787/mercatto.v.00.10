@@ -1,0 +1,366 @@
+/* Mercadinho - puro.css - Estilos das paginas feitas com HTML, CSS e JavaScript puros */
+:root {
+    --verde: #0f766e;
+    --verde-escuro: #0b5a54;
+    --vermelho: #b91c1c;
+    --branco: #ffffff;
+    --cinza: #f3f4f6;
+    --borda: #e5e7eb;
+    --texto: #1f2328;
+    --suave: #5b6470;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--branco);
+    color: var(--texto);
+    font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+a {
+    color: var(--verde);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--verde-escuro);
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+.p-container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 1rem;
+}
+
+.p-barra {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    padding: 0.9rem 0;
+}
+
+.p-barra-fluxo {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.p-marca {
+    color: var(--verde);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.p-busca {
+    flex: 1;
+    min-width: 200px;
+}
+
+.p-campo {
+    background: var(--cinza);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    font: inherit;
+    padding: 0.65rem 0.9rem;
+    width: 100%;
+}
+
+.p-campo:hover {
+    border-color: var(--verde);
+}
+
+.p-campo:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.2);
+    outline: none;
+}
+
+.p-campo:invalid:not(:placeholder-shown) {
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15);
+}
+
+.p-toggler {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    display: none;
+    font-size: 1.3rem;
+    margin-left: auto;
+    padding: 0.2rem 0.7rem;
+}
+
+.p-menu {
+    align-items: center;
+    display: flex;
+    gap: 0.3rem;
+}
+
+.p-menu a {
+    border-radius: 8px;
+    color: var(--texto);
+    padding: 0.5rem 0.75rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.p-menu a:hover,
+.p-menu a.ativo {
+    background: var(--cinza);
+    color: var(--verde);
+}
+
+.p-menu a.p-carrinho {
+    background: var(--verde);
+    color: var(--branco);
+    font-weight: 600;
+}
+
+.p-menu a.p-carrinho:hover {
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.p-principal {
+    min-height: 60vh;
+    padding: 2rem 0;
+}
+
+.p-titulo {
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+}
+
+.p-botao {
+    background: var(--verde);
+    border: 0;
+    border-radius: 10px;
+    color: var(--branco);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    padding: 0.7rem 1.3rem;
+}
+
+.p-botao:hover,
+.p-botao:focus {
+    background: var(--verde-escuro);
+}
+
+.p-botao-perigo {
+    background: var(--branco);
+    border: 1px solid var(--vermelho);
+    color: var(--vermelho);
+}
+
+.p-botao-perigo:hover {
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.p-alerta {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 0.8rem 1rem;
+}
+
+.p-alerta-ok {
+    background: #e6f4f2;
+    border: 1px solid var(--verde);
+    color: var(--verde-escuro);
+}
+
+.p-alerta-erro {
+    background: #fdecec;
+    border: 1px solid var(--vermelho);
+    color: var(--vermelho);
+}
+
+.p-oculto {
+    display: none;
+}
+
+.p-abas {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.p-aba {
+    background: var(--cinza);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    font: inherit;
+    padding: 0.55rem 1.2rem;
+}
+
+.p-aba:hover,
+.p-aba.ativa {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.p-painel {
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    margin: 0 auto;
+    max-width: 480px;
+    padding: 1.5rem;
+}
+
+.p-rotulo {
+    display: block;
+    font-weight: 500;
+    margin: 1rem 0 0.3rem;
+}
+
+.p-cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.p-cartao {
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    flex: 1 1 200px;
+    overflow: hidden;
+}
+
+.p-cartao img {
+    aspect-ratio: 4 / 3;
+    background: #e2e8ec;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.p-cartao div {
+    padding: 1rem;
+}
+
+.p-cartao h3 {
+    margin: 0 0 0.4rem;
+}
+
+.p-galeria {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    margin: 1.5rem 0;
+}
+
+.p-galeria figure {
+    cursor: pointer;
+    margin: 0;
+}
+
+.p-galeria img {
+    aspect-ratio: 1 / 1;
+    background: #e2e8ec;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.p-galeria img:hover,
+.p-galeria img.destaque {
+    border-color: var(--verde);
+}
+
+.p-galeria img.destaque {
+    outline: 3px solid var(--vermelho);
+}
+
+.p-midia {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.p-midia video {
+    border-radius: 14px;
+    width: 100%;
+}
+
+.p-midia audio {
+    width: 100%;
+}
+
+.p-rodape {
+    background: var(--cinza);
+    border-top: 1px solid var(--borda);
+    padding: 1.5rem 0;
+}
+
+.p-rodape-fluxo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.p-rodape a {
+    color: var(--texto);
+    margin-left: 1rem;
+}
+
+.p-rodape a:hover {
+    color: var(--verde);
+}
+
+@media (max-width: 767px) {
+    .p-toggler {
+        display: block;
+    }
+
+    .p-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .p-menu.aberto {
+        display: flex;
+    }
+
+    .p-midia {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Video de apresentacao: proporcional, centralizado e com largura limitada */
+.p-video {
+    padding: 1.5rem 0 0.5rem;
+}
+
+.p-video-caixa {
+    aspect-ratio: 1742 / 1188;
+    background: #000;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    max-width: 720px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.p-video-caixa video {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}

@@ -1,0 +1,349 @@
+/* Mercadinho - estilo.css - Estilos personalizados das paginas que usam Bootstrap */
+:root {
+    --verde: #0f766e;
+    --verde-escuro: #0b5a54;
+    --vermelho: #b91c1c;
+    --branco: #ffffff;
+    --cinza: #f3f4f6;
+    --cinza-img: #e2e8ec;
+    --borda: #e5e7eb;
+    --texto: #1f2328;
+    --suave: #5b6470;
+    --bs-link-color: #0f766e;
+    --bs-link-hover-color: #0b5a54;
+    --bs-body-color: #1f2328;
+    --bs-body-bg: #ffffff;
+}
+
+body {
+    font-family: "Roboto", "Segoe UI", Arial, sans-serif;
+    color: var(--texto);
+    background: var(--branco);
+}
+
+a {
+    color: var(--verde);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--verde-escuro);
+}
+
+.barra {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    padding: 0.9rem 0;
+}
+
+.marca {
+    color: var(--verde);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.barra .nav-link {
+    color: var(--texto);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.barra .nav-link:hover,
+.barra .nav-link.active {
+    background: var(--cinza);
+    color: var(--verde);
+}
+
+.busca .form-control {
+    background: var(--cinza);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+}
+
+.btn-verde {
+    background: var(--verde);
+    border: 1px solid var(--verde);
+    border-radius: 10px;
+    color: var(--branco);
+    font-weight: 600;
+    padding: 0.6rem 1.1rem;
+}
+
+.btn-verde:hover,
+.btn-verde:focus {
+    background: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.btn-contorno {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    color: var(--texto);
+    padding: 0.6rem 1.1rem;
+}
+
+.btn-contorno:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.btn-branco {
+    background: var(--branco);
+    border-radius: 10px;
+    color: var(--verde);
+    font-weight: 600;
+    padding: 0.7rem 1.4rem;
+}
+
+.btn-branco:hover {
+    background: var(--cinza);
+    color: var(--verde-escuro);
+}
+
+.btn-perigo {
+    background: transparent;
+    border: 0;
+    color: var(--vermelho);
+    font-size: 0.9rem;
+}
+
+.btn-perigo:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: linear-gradient(90deg, rgba(15, 118, 110, 0.97) 35%, rgba(15, 118, 110, 0.15)), url("../img/banner.svg") center / cover;
+    border-radius: 16px;
+    color: var(--branco);
+    margin-top: 1.5rem;
+    padding: 3.5rem 3rem;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+#video_family {
+    width: 50%;
+    height: 300px;
+    display: block;
+    margin: 30px ;
+    border-radius: 12px;
+}
+.chip {
+    background: var(--cinza);
+    border-radius: 999px;
+    color: var(--texto);
+    padding: 0.55rem 1.2rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.chip:hover,
+.chip.ativo {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.produto-card {
+    border: 0;
+    border-radius: 14px;
+    position: relative;
+}
+
+.produto-card img {
+    aspect-ratio: 4 / 3;
+    background: var(--cinza-img);
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.produto-card:hover img {
+    outline: 2px solid var(--verde);
+}
+
+.produto-card .card-body {
+    padding: 0.75rem 0;
+}
+
+.selo-oferta {
+    background: var(--vermelho);
+    left: 0.6rem;
+    position: absolute;
+    top: 0.6rem;
+}
+
+.banner {
+    border-radius: 16px;
+    max-height: 160px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.preco {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.preco-grande {
+    color: var(--verde);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.imagem-grande {
+    aspect-ratio: 4 / 3;
+    background: var(--cinza-img);
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.miniatura {
+    background: var(--cinza-img);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 0;
+    width: 90px;
+}
+
+.miniatura img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.miniatura.ativa,
+.miniatura:hover {
+    border-color: var(--verde);
+}
+
+.vendedor {
+    background: var(--cinza);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+}
+
+.item-carrinho {
+    align-items: center;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem;
+}
+
+.item-carrinho img {
+    background: var(--cinza-img);
+    border-radius: 10px;
+    height: 72px;
+    object-fit: cover;
+    width: 72px;
+}
+
+.item-carrinho .info {
+    flex: 1;
+}
+
+.quantidade {
+    align-items: center;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.quantidade button {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    height: 36px;
+    width: 36px;
+}
+
+.quantidade button:hover {
+    border-color: var(--verde);
+    color: var(--verde);
+}
+
+.resumo {
+    background: var(--branco);
+    border-top: 1px solid var(--borda);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+.alert-success {
+    background: #e6f4f2;
+    border-color: var(--verde);
+    color: var(--verde-escuro);
+}
+
+.alert-danger {
+    background: #fdecec;
+    border-color: var(--vermelho);
+    color: var(--vermelho);
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+}
+
+.form-control:hover,
+.form-select:hover {
+    border-color: var(--verde);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.2);
+}
+
+.form-control:invalid:not(:placeholder-shown),
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    background-image: none;
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.15);
+}
+
+.tabela-planos thead {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.tabela-planos tbody tr:hover {
+    background: var(--cinza);
+}
+
+.rodape {
+    background: var(--cinza);
+    border-top: 1px solid var(--borda);
+}
+
+.rodape a {
+    color: var(--texto);
+}
+
+.rodape a:hover {
+    color: var(--verde);
+}
+
+@media (max-width: 767px) {
+    .hero {
+        background: linear-gradient(rgba(15, 118, 110, 0.9), rgba(15, 118, 110, 0.9)), url("../img/banner.svg") center / cover;
+        padding: 2rem 1.4rem;
+    }
+
+    .preco-grande {
+        font-size: 1.8rem;
+    }
+
+    .item-carrinho {
+        flex-wrap: wrap;
+    }
+}
